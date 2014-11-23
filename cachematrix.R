@@ -4,7 +4,7 @@
 #compute the inverse and stores it to cache (setinverse)
 #retreive the inverse from cache (getinverse)
 #compute the inverse, and 
-#makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
 	m <- NULL
         set <- function(y) {
                 x <<- y
@@ -18,8 +18,10 @@
 
 
 #This function uses the special vector returned by 
-#makeCacheMatrix to determine if the inverse has already been calculated (and the matrix
-#has not changed). If so, the function willThen cacheSolve should retrieve the inverse from the cache
+#makeCacheMatrix to determine if the inverse has already been calculated 
+#(and the matrix has not changed). If so, the function will
+#retrieve the inverse from the cache. Otherwise it will
+#compute the inverse and return it
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
